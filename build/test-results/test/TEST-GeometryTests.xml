@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="GeometryTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-01-25T16:59:53" hostname="DESKTOP-JSBVD3G" time="0.01">
+<testsuite name="GeometryTests" tests="7" skipped="0" failures="0" errors="0" timestamp="2021-01-25T18:48:44" hostname="DESKTOP-JSBVD3G" time="0.036">
   <properties/>
-  <testcase name="length_width_of_rectangle_withoutParameters" classname="GeometryTests" time="0.007"/>
-  <testcase name="update_length_width_of_rectangle" classname="GeometryTests" time="0.0"/>
+  <testcase name="retrieve_color_of_shape" classname="GeometryTests" time="0.009"/>
+  <testcase name="radius_of_circle" classname="GeometryTests" time="0.001"/>
+  <testcase name="radius_of_circle_without_parameters" classname="GeometryTests" time="0.003"/>
+  <testcase name="update_radius_of_circle" classname="GeometryTests" time="0.002"/>
+  <testcase name="length_width_of_rectangle_withoutParameters" classname="GeometryTests" time="0.002"/>
+  <testcase name="update_length_width_of_rectangle" classname="GeometryTests" time="0.005"/>
   <testcase name="length_width_of_rectangle" classname="GeometryTests" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
