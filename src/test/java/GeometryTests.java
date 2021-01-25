@@ -143,7 +143,14 @@ public class GeometryTests {
         assertEquals(7.0,rectangle.distanceTo(circle),0);
 
     }
-    
+    @Test
+    public void display_shape(){
+        Point point1= new Point(0,0);
+        Rectangle rectangle= new Rectangle(10.5,5.5);
+        rectangle.setCenter(point1);
+        assertEquals("10.5 X 5.5 rectangle at (0,0)",rectangle.display());
+
+    }
 
 
 }

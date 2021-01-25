@@ -32,4 +32,11 @@ public abstract class Shape {
         double y=(shape.getCenter().getY()-this.center.getY())*(shape.getCenter().getY()-this.center.getY());
         return Math.sqrt(x+y);
     }
+
+    public String display(){
+//        if(this instanceof Rectangle){
+//           return  ((Rectangle) this).getLength()+"X"+((Rectangle) this).getWidth() + "rectangle at "+ this.getCenter().getX() +",this.getCenter() ";
+//        }
+        return "";
+    }
 }
