@@ -130,6 +130,20 @@ public class GeometryTests {
 
 
     }
+    @Test
+    public void retrieve_distance_between_shapes(){
+        Point point1= new Point(0,0);
+        Rectangle rectangle= new Rectangle(10.5,5.5);
+        rectangle.setCenter(point1);
+        Point point2= new Point(0,7);
+        Circle circle= new Circle(6.0);
+        circle.setCenter(point2);
+
+        assertEquals(7.0,circle.distanceTo(rectangle),0);
+        assertEquals(7.0,rectangle.distanceTo(circle),0);
+
+    }
+    
 
 
 }

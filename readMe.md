@@ -103,6 +103,38 @@ When I have a shape that’s been placed on my plane
 Then if I give the shape an (x,y) offset
 Then the shape’s center point moves by that offset
 
+*******************************************************************
+
+I can find the distance between any two shapes
+
+If I have two shapes on my plane
+Then I can find the absolute linear distance between their centers
+
+**********************************************************************
+
+I can see representations of all of the things I have
+
+If I have a rectangle on my plane
+Then I should see “<length> X <width> rectangle at (x,y)”
+
+If I have a rectangle not on my plane
+Then I should see “<length> X <width> rectangle”
+
+If I have a circle on my plane
+Then I should see “circle of radius <radius> at (x,y)”
+
+If I have a rectangle not on my plane
+Then I should see “circle of radius <radius>”
+
+If I have a point
+Then I should see “(x,y)”
+
+If I have a segment
+Then I should see “[(x,y)--(x,y)]”
+
+If I have any items on my plane
+Then I should be able to see a representation of all of them
+
 
 
 

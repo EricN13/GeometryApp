@@ -26,4 +26,10 @@ public abstract class Shape {
         }
         return center ;
     }
+
+    public double distanceTo(Shape shape) {
+        double x=(shape.getCenter().getX()-this.center.getX())*(shape.getCenter().getX()-this.center.getX());
+        double y=(shape.getCenter().getY()-this.center.getY())*(shape.getCenter().getY()-this.center.getY());
+        return Math.sqrt(x+y);
+    }
 }
