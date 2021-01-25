@@ -73,6 +73,35 @@ I can place any shape at an (x,y) point on a cartesian plane
 When I have a shape and a point
 Then I can set the shape’s center location to the point
 
+**************************************************************
+
+I can find the location of any shape on my plane
+
+When I have a shape that’s been placed on my plane
+Then I can retrieve the point at which it is located
+
+**************************************************************
+
+I cannot find the location of a shape that is not on my plane
+
+When I have a shape that’s not been placed on my plane
+Then attempting to retrieve its location informs me that the 
+shape is not on the plane
+
+**************************************************************
+I can move any point by an (x,y) offset
+
+When I have a point
+Then if I give that point an (x, y) offset
+Then the point changes to the sum of its coordinates and those I’ve provided
+
+******************************************************************
+
+I can move any shape by an (x,y) offset from its current location
+
+When I have a shape that’s been placed on my plane
+Then if I give the shape an (x,y) offset
+Then the shape’s center point moves by that offset
 
 
 

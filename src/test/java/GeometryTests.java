@@ -1,6 +1,7 @@
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 public class GeometryTests {
     @Test
@@ -85,7 +86,7 @@ public class GeometryTests {
 
     }
     @Test
-    public void set_center_of_shape(){
+    public void set_get_center_of_shape(){
         Point point1= new Point(6,5);
         Rectangle rectangle= new Rectangle(10.5,5.5);
         rectangle.setCenter(point1);
@@ -94,6 +95,39 @@ public class GeometryTests {
         Circle circle= new Circle(6.0);
         circle.setCenter(point2);
         assertEquals(point2,circle.getCenter());
+
+    }
+
+    @Test
+    public void retrieve_center_not_on_plane(){
+        Rectangle rectangle= new Rectangle(10.5,5.5);
+        try{
+           rectangle.getCenter();
+           fail();
+        }
+        catch(Exception ex){
+            assertEquals("shape is not on the plane",ex.getMessage());
+        }
+
+    }
+    @Test
+    public void move_point(){
+        Point point=new Point(10,20);
+        point.move(5,2);
+        Point expected= new Point(15,22);
+        assertEquals(expected.getX(),point.getX());
+        assertEquals(expected.getY(),point.getY());
+    }
+    @Test
+    public void move_center_of_shape(){
+        Point point= new Point(6,5);
+        Rectangle rectangle= new Rectangle(10.5,5.5);
+        rectangle.setCenter(point);
+        rectangle.getCenter().move(4,5);
+        Point expected= new Point(10,10);
+        assertEquals(expected.getX(),rectangle.getCenter().getX());
+        assertEquals(expected.getY(),rectangle.getCenter().getY());
+
 
     }
 

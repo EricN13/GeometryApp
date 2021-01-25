@@ -21,6 +21,9 @@ public abstract class Shape {
     }
 
     public Point getCenter(){
+        if(center==null){
+            throw new RuntimeException("shape is not on the plane");
+        }
         return center ;
     }
 }
