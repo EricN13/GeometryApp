@@ -58,8 +58,44 @@ public class GeometryTests {
         assertEquals("blue", rectangle.getColor());
         Circle circle = new Circle();
         assertEquals("Burnt Umber", circle.getColor());
+    }
+    @Test
+    public void retrieve_perimeter(){
+        Rectangle rectangle = new Rectangle(10.0,5.0);
+        assertEquals((10.0+5.0)*2,rectangle.calculate_Perimeter(),0);
+        Circle circle = new Circle(10.0);
+        assertEquals(2*Math.PI*10.0,circle.calculate_Perimeter(),0);
 
 
     }
+
+    @Test
+    public void retrieve_area(){
+        Rectangle rectangle = new Rectangle(10.0,5.0);
+        assertEquals(10.0*5.0,rectangle.calculate_area(),0);
+        Circle circle = new Circle(10.5);
+        assertEquals(10.5*10.5*Math.PI,circle.calculate_area(),0);
+
+    }
+    @Test
+    public void retrieve_x_y_coordinates(){
+        Point point = new Point(6,5);
+        assertEquals(6,point.getX());
+        assertEquals(5,point.getY());
+
+    }
+    @Test
+    public void set_center_of_shape(){
+        Point point1= new Point(6,5);
+        Rectangle rectangle= new Rectangle(10.5,5.5);
+        rectangle.setCenter(point1);
+        assertEquals(point1,rectangle.getCenter());
+        Point point2= new Point(10,7);
+        Circle circle= new Circle(6.0);
+        circle.setCenter(point2);
+        assertEquals(point2,circle.getCenter());
+
+    }
+
 
 }

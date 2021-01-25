@@ -47,6 +47,33 @@ Then I can retrieve the color of that shape
 When I have not set the color of a shape
 Then the color I retrieve is “Burnt Umber”
 
+**************************************************
+I can find the perimeter of any shape
+
+When I have a shape
+Then I can retrieve its perimeter
+
+**************************************************
+
+I can find the area of any shape
+
+When I have a shape
+Then I can retrieve its area
+
+***************************************************
+
+I can create a point
+
+When I create a point (x,y)
+Then I can retrieve its x and y coordinates
+
+************************************************
+I can place any shape at an (x,y) point on a cartesian plane
+
+When I have a shape and a point
+Then I can set the shape’s center location to the point
+
+
 
 
 
